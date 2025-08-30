@@ -1,17 +1,18 @@
-import Navbar from "../components/NavBar";
-import actors from "../data/actors";
+import React from "react";
+import NavBar from "../components/NavBar.jsx";
+import actors from "../data/actors.js";
 
-function Actors() {
+export default function Actors() {
   return (
     <div>
-      <Navbar />
+      <NavBar />
       <h1>Actors Page</h1>
-      {actors.map((actor) => (
+      {actors.map(actor => (
         <article key={actor.id}>
           <h2>{actor.name}</h2>
           <ul>
-            {actor.movies.map((movie, i) => (
-              <li key={i}>{movie}</li>
+            {actor.movies.map((m, i) => (
+              <li key={i}>{m}</li>
             ))}
           </ul>
         </article>
@@ -19,5 +20,3 @@ function Actors() {
     </div>
   );
 }
-
-export default Actors;

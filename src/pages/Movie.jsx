@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import NavBar from "../components/NavBar";
-import movies from "../data/movies";
+import NavBar from "../components/NavBar.jsx";
+import movies from "../data/movies.js";
 
 export default function Movie() {
   const { id } = useParams();
@@ -15,7 +15,7 @@ export default function Movie() {
       <h1>{movie.title}</h1>
       <p>{movie.time}</p>
       {movie.genres.map((genre, index) => (
-        <span key={index}>{genre} </span>
+        <span key={index} style={{ marginRight: "0.5rem" }}>{genre}</span>
       ))}
     </div>
   );

@@ -1,6 +1,6 @@
 import React from "react";
-import NavBar from "../components/NavBar";
-import directors from "../data/directors";
+import NavBar from "../components/NavBar.jsx";
+import directors from "../data/directors.js";
 
 export default function Directors() {
   return (
