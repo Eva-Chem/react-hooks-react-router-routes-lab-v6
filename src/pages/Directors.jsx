@@ -1,17 +1,18 @@
-import Navbar from "../components/NavBar";
+import React from "react";
+import NavBar from "../components/NavBar";
 import directors from "../data/directors";
 
-function Directors() {
+export default function Directors() {
   return (
     <div>
-      <Navbar />
+      <NavBar />
       <h1>Directors Page</h1>
-      {directors.map((director) => (
+      {directors.map(director => (
         <article key={director.id}>
           <h2>{director.name}</h2>
           <ul>
-            {director.movies.map((movie, i) => (
-              <li key={i}>{movie}</li>
+            {director.movies.map((m, i) => (
+              <li key={i}>{m}</li>
             ))}
           </ul>
         </article>
@@ -19,5 +20,3 @@ function Directors() {
     </div>
   );
 }
-
-export default Directors;
